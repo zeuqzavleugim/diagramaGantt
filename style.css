@@ -1,0 +1,70 @@
+/* Basic styles  */
+#gantt{
+	font-family: "Roboto";
+}
+
+#gantt table{
+	border-collapse: collapse;
+	border-spacing: 0px 20px;
+}
+
+table tr{
+	border-bottom: 5px solid white;
+}
+
+#gantt table tr th{
+	border: 1px solid white;
+	border-collapse: collapse;
+	padding: 9px;
+	font-size: 12px;
+	background-color: lightgray;
+	line-height: 35px;
+}
+
+
+#gantt table tr td{
+	padding: 5px;
+	line-height: 35px;
+	border-left: 1px dotted rgb(70, 53, 53);
+	width: 250px;
+}
+
+#gantt table tr td:last-child{
+	border-right: 1px dotted rgb(65, 56, 56);
+}
+
+#gantt table tr td.event-cell{
+	color: rgb(0, 0, 0);
+	font-size: 12px;
+	text-align: left;
+	padding-left: 10px;
+	border-radius: 26px;
+	border-left: none;
+}
+
+#gantt table tr td.event-cell:last-child{
+	border-right: none;
+}
+
+#gantt table tr td.event-cell span{
+	background-color: #f6a400;
+	padding: 5px 10px;
+	border-radius: 15px;
+	margin-right: 10px;
+	color: #685c43;
+}
+#header{
+    text-align: center;
+}
+body{
+    background-color: #acb197;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding-top: 40px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+  }
