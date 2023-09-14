@@ -23,6 +23,30 @@
     <div>
         <h4>Las tareas que tengo que realizar</h4><br>
     </div>
+
+    <div>
+        <section class="text-center">
+            <form action="">
+                <table>
+                    <tr>
+                        <th><label for="ntarea">Nombre de la tarea</label></th>
+                        <th><label for="inicfecha">Fecha de inicio</label></th>
+                        <th><label for="finfecha">Fecha final</label></th>
+                        <th><label for="porcentaje">Porcentaje realizado</label></th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" minlength="4" maxlength="10" id="ntarea" required></th>
+                        <th><input type="date" min="2023-01-01" max="2024-12-31" id="inicfecha" required></th>
+                        <th><input type="date" min="2023-01-01" max="2024-12-31" id="finfecha" required></th>
+                        <th><input type="number" max="100" min="0" step="10" id="porcentaje" required></th>
+                        <th><input type="submit" class="btn btn-light"></th>
+                    </tr>
+                </table>
+                <br>
+            </form>
+        </section>
+    </div>
+
     <div class="chart-wrapper">
         <ul class="chart-values">
           <li>domingo</li>
