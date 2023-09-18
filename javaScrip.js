@@ -99,26 +99,11 @@ class Gantt {
   }
 
   function gantt(){
-    /*
+    
     var obj = new Gantt([
       ['Action 1', '2023-05-12', '2023-05-13', '#4287f5', 80],
       ['Action 2', '2023-05-12', '2023-05-14', '#c1409b', 10],
       ['Action 3', '2023-05-14', '2023-05-17', '#0b9971', 20],
       ])
-    */
-    var form = document.getElementById('form');
-    form.addEventListener('submit', function(event){
-      event.preventDefault()
-      
-      var tarea = document.getElementById("ntarea").value;
-      var incfecha = document.getElementById("inicfecha").value;
-      var finfecha = document.getElementById("finfecha").value;
-      var color = document.getElementById("color").value;
-      var porcen = document.getElementById("porcentaje").value;
-      
-      var arr = [tarea, incfecha, finfecha, color, porcen];
-      
-      var obj = new Gantt([arr])
-    });
-
+    
   }
