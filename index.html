@@ -26,30 +26,6 @@
         <div>
             <h4>Las tareas que tengo que realizar</h4><br>
         </div>
-        <div>
-            <section>
-                <form method="post" name="autenticacion" id="form">
-                    <table>
-                        <tr>
-                            <th><label for="ntarea">Nombre de la tarea</label></th>
-                            <th><label for="inicfecha">Fecha de inicio</label></th>
-                            <th><label for="finfecha">Fecha final</label></th>
-                            <th><label for="porcentaje">Porcentaje realizado</label></th>
-                            <th><label for="">Color</label></th>
-                        </tr>
-                        <tr>
-                            <th><input type="text" minlength="4" maxlength="10" id="ntarea" name="ntarea" required></th>
-                            <th><input type="date" min="2023-01-01" max="2024-12-31" id="inicfecha" name="inicfecha" required></th>
-                            <th><input type="date" min="2023-01-01" max="2024-12-31" id="finfecha" name="finfecha" required></th>
-                            <th><input type="number" max="100" min="0" step="10" id="porcentaje" name="porcentaje" required></th>
-                            <th><input type="color" value="#f6b73c" id="color" name="color" required></th>
-                            <th><input type="submit" class="btn btn-light"></th>
-                        </tr>
-                    </table>
-                    <br>
-                </form>
-            </section>
-        </div>
         <div id="gantt"></div>
         <!-- 
         <script type="text/javascript">
