@@ -13,7 +13,7 @@
     <title>Diagrama de Gant</title>
     <script type="text/javascript" src="javaScrip.js"></script>
 </head>
-<body onload="gantt();">
+<body > <!-- onload="gantt();" -->
     <div id="header">
         <header>
             <h1>Tabla de Gant</h1>
@@ -24,21 +24,20 @@
     <br>
     <div>
         <div>
-            <h4>Las tareas que tengo que realizar</h4><br>
+            <h4>Acciones realizadas</h4><br>
         </div>
         <div id="gantt"></div>
-        <!-- 
         <script type="text/javascript">
-			const obj = new Gantt([
-				['Action 1', '2023-05-12', '2023-05-13', '#4287f5', 80],
-				['Action 2', '2023-05-12', '2023-05-14', '#c1409b', 10],
-				['Action 3', '2023-05-14', '2023-05-17', '#0b9971', 20],
-				['Action 4', '2023-05-18', '2023-05-22', '#d26a52', 55],
-				['Action 5', '2023-05-19', '2023-05-22', '#4287f5', 100],
-				['Action 6', '2023-05-12', '2023-05-20', '#0b9971', 32],
+			var obj = new Gantt([
+                ['Raul', 'Action 1', '2023-05-12', '2023-05-13', '#4287f5'],
+				['Sofia', 'Action 2', '2023-05-12', '2023-05-14', '#c1409b'],
+				['Rafa', 'Action 3', '2023-05-14', '2023-05-17', '#0b9971'],
+				['Laura', 'Action 4', '2023-05-18', '2023-05-22', '#d26a52'],
+				['Karla', 'Action 5', '2023-05-19', '2023-05-22', '#4287f5'],
+				['Martin', 'Action 6', '2023-05-12', '2023-05-20', '#0b9971']
+              //['0       ', '1         ', '2         ', '3      ','4      ']
 				]);
 		</script>
-            -->            
     </div>
 </body>
 </html>

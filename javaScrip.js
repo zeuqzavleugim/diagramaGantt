@@ -82,7 +82,7 @@ class Gantt {
         html += '<tr>';
         html += '<th>' + name +'</th>';
         if(daysBefore > 0) for(let j = 0; j < daysBefore; j++) html += '<td></td>';
-        html += '<td class="event-cell" colspan="'+days+'" style="background-color: '+task[4]+';"><span>'+task[5]+'% terminado</span>'+task[1]+'</td>';
+        html += '<td class="event-cell" colspan="'+days+'" style="background-color: '+task[4]+';">'+task[1]+'</td>';
         if(daysAfter > 0) for(let j = 0; j < daysAfter; j++) html += '<td></td>';
         html += '</tr>';
       }
@@ -111,13 +111,13 @@ class Gantt {
   function gantt(){
     
     var obj = new Gantt([
-        ['Raul', 'Action 1', '2023-05-12', '2023-05-13', '#4287f5', 80],
-				['Sofia', 'Action 2', '2023-05-12', '2023-05-14', '#c1409b', 10],
-				['Rafa', 'Action 3', '2023-05-14', '2023-05-17', '#0b9971', 20],
-				['Laura', 'Action 4', '2023-05-18', '2023-05-22', '#d26a52', 55],
-				['Karla', 'Action 5', '2023-05-19', '2023-05-22', '#4287f5', 100],
-				['Martin', 'Action 6', '2023-05-12', '2023-05-20', '#0b9971', 32]
-      //['0       ', '1         ', '2         ', '3      ','4      ','5']
+        ['Raul', 'Action 1', '2023-05-12', '2023-05-13', '#4287f5'],
+				['Sofia', 'Action 2', '2023-05-12', '2023-05-14', '#c1409b'],
+				['Rafa', 'Action 3', '2023-05-14', '2023-05-17', '#0b9971'],
+				['Laura', 'Action 4', '2023-05-18', '2023-05-22', '#d26a52'],
+				['Karla', 'Action 5', '2023-05-19', '2023-05-22', '#4287f5'],
+				['Martin', 'Action 6', '2023-05-12', '2023-05-20', '#0b9971']
+      //['0       ', '1         ', '2         ', '3      ','4      ']
 				]);
     
   }
