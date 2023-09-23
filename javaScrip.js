@@ -12,11 +12,6 @@ class Gantt {
       document.getElementById('gantt').innerHTML = this.buildTableHeader() + this.buildTableBody();
     }
   
-  
-    /**
-    * Get min and max dates from all tasks
-    * 
-    */
     setMinAndMaxDate(){
       var maxDates = [];
       var minDates = [];
@@ -39,7 +34,6 @@ class Gantt {
   
   
     /**
-    * Generate the html for the table header
     * @returns {Sting} Html code
     */
     buildTableHeader(){
@@ -58,7 +52,6 @@ class Gantt {
   
   
     /**
-    * Generate the html for the table body
     * @returns {Sting} Html code
     */
     buildTableBody(){
@@ -80,7 +73,7 @@ class Gantt {
         if(this.maxDate == dMax) daysAfter = 0;
   
         html += '<tr>';
-        html += '<th>' + name +'</th>';
+        html += '<th id="name">' + name +'</th>';
         if(daysBefore > 0) for(let j = 0; j < daysBefore; j++) html += '<td></td>';
         html += '<td class="event-cell" colspan="'+days+'" style="background-color: '+task[4]+';">'+task[1]+'</td>';
         if(daysAfter > 0) for(let j = 0; j < daysAfter; j++) html += '<td></td>';
@@ -95,7 +88,6 @@ class Gantt {
   
   
     /**
-    * Calculate diff in days between two dates
     * @param {date} the max date
     * @param {date} the min date
     * @returns {integer} num of days

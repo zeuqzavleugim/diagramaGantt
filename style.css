@@ -33,7 +33,7 @@ table tr{
 	border-right: 1px dotted rgb(65, 56, 56);
 }
 
-#gantt table tr td.event-cell{
+#gantt table tr td .event-cell{
 	color: rgb(0, 0, 0);
 	font-size: 12px;
 	text-align: left;
