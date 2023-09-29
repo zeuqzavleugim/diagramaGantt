@@ -129,7 +129,7 @@ class Gantt {
         if(daysBefore > 0) for(let j = 0; j < daysBefore; j++) html += '<td></td>';
         html += '<td class="event-cell" colspan="'+distans+'" style="background-color: '+color+';">'+task[1]+'</td>';
         if(daysAfter > 0) for(let j = 0; j < daysAfter; j++) html += '<td></td>';
-        html += '<td>'+days+'</td>';
+        html += '<th>'+days+'</th>';
         html += '</tr>';
       }
   
