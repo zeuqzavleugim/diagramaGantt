@@ -1,14 +1,19 @@
 table{
 	border-collapse: collapse;
 	border-spacing: 0px 20px;
+	width: 100px;
+	table-layout: fixed;
 }
 
 table, tr{
 	border-bottom: 2px solid #7D7C7C;
+	
 }
 #gantt{
 	padding: 20px;
 	font-size: 12px;
+	margin: 0 auto;
+	width: 1500px;
 } 
 
 table, tr, th{
@@ -18,15 +23,22 @@ table, tr, th{
 	font-size: 12px;
 	background-color: #FFF5E0;
 	line-height: 25px;
-	
 }
 
+th{
+	width: 100px;
+	text-align: center;
+}
+
+li{
+	list-style: none;
+}
 
 table, tr, td{
 	padding: 5px;
 	line-height: 25px;
 	border-left: 1px dotted rgb(65, 61, 61);
-	width: 250px;
+	width: 1000px;
 }
 
 table, tr, td:last-child{
@@ -48,7 +60,7 @@ table, tr, td, :last-child{
 
 
 
-table, tr, td, .event-cell{
+table, tr, td, li, .event-cell{
 	background-color: #FFF5E0;
 	padding: 5px 10px;
 	border-radius: 2rem;
@@ -67,4 +79,5 @@ body{
     margin: 0;
     box-sizing: border-box;
     text-align: center;
+	margin: 0 auto;
   }

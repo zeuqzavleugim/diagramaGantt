@@ -105,9 +105,10 @@ class Gantt {
         var dddmax = ddmax + 1;
 
         var days = this.diffInDays(dMax, dMin);                      //
-        
+        var dayss = days;
+
         var distans = this.diferencias(dddmax, dddmin) +1;
-        //var distans = Math.ceil(this.diffInDays(dMax, dMin)/30);     //
+        //var distans = Math.ceil(this.diffInDays(dMax, dMin)/30);   //
         if(distans == 13){
           distans = 12
         }
@@ -118,17 +119,27 @@ class Gantt {
   
         if(days <= 20){                                              //
           color = "#7FFF00";                                         //
+          if(days <= 5){                                             //
+            dayss = (days * 2)                                       //
+          }                                             
         }else if(days > 20 && days <= 50){                           //
           color = "#FF8C00";                                         //
+          dayss = days/2                                             //
         }else if(days > 50){                                         //
           color = "#B22222"                                          //
+          dayss = (days/10)                                          //
         }                                                            //
 
         html += '<tr>';
         html += '<th id="name">' + name +'</th>';
         if(daysBefore > 0) for(let j = 0; j < daysBefore; j++) html += '<td></td>';
+        html += '<td class="event-cell" colspan="'+distans+'">'+'<li style="background-color:'+color+';'+'width:'+ (dayss*10) +'%;">'+task[1]+'</li>'+'</td>';
+        if(daysAfter > 0) for(let j = 0; j < daysAfter; j++) html += '<td></td>';
+        /*
+        if(daysBefore > 0) for(let j = 0; j < daysBefore; j++) html += '<td></td>';
         html += '<td class="event-cell" colspan="'+distans+'" style="background-color: '+color+';">'+task[1]+'</td>';
         if(daysAfter > 0) for(let j = 0; j < daysAfter; j++) html += '<td></td>';
+        */
         html += '<th>'+days+'</th>';
         html += '</tr>';
       }
