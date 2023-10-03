@@ -107,8 +107,7 @@ class Gantt {
         var days = this.diffInDays(dMax, dMin);                      //
         var dayss = days;
 
-        var distans = this.diferencias(dddmax, dddmin) +1;
-        //var distans = Math.ceil(this.diffInDays(dMax, dMin)/30);   //
+        var distans = this.diferencias(dddmax, dddmin) +1;           //
         if(distans == 13){
           distans = 12
         }
@@ -166,18 +165,4 @@ class Gantt {
       return diferencias;
     }
   
-  }
-
-  function gantt(){
-    
-    var obj = new Gantt([
-        ['Raul', 'Action 1', '2023-01-1', '2023-12-31'],  //0
-				['Sofia', 'Action 2', '2023-03-12', '2023-04-04'], //1
-				['Rafa', 'Action 3', '2023-06-14', '2023-06-17'],  //2
-				['Laura', 'Action 4', '2023-08-18', '2023-08-22'], //3
-				['Karla', 'Action 5', '2023-05-19', '2023-05-22'], //4
-				['Martin', 'Action 6', '2023-05-12', '2023-12-20'] //5
-      //['0       ', '1         ', '2         ', '3      ']
-				]);
-    
   }
