@@ -10,7 +10,7 @@ table, tr{
 	
 }
 #gantt{
-	padding: 20px;
+	padding: 10px;
 	font-size: 12px;
 	margin: 0 auto;
 	width: 1000px;
@@ -26,7 +26,7 @@ table, tr, th{
 }
 
 th{
-	width: 90px;
+	width: 71.42px;
 	text-align: center;
 }
 
