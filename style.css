@@ -19,14 +19,14 @@ table, tr{
 table, tr, th{
 	border: 2px solid #7D7C7C;
 	border-collapse: collapse;
-	padding: 9px;
+	padding: 8px;
 	font-size: 12px;
 	background-color: #FFF5E0;
 	line-height: 25px;
 }
 
 th{
-	width: 71.42px;
+	width: 79px;
 	text-align: center;
 }
 
