@@ -1,5 +1,4 @@
 class Gantt {
-
     /**
     * Init representation in HTML 
     * @param {array} the tasks list
@@ -25,59 +24,20 @@ class Gantt {
       this.maxDate = new Date(Math.max.apply(null,maxDates)); 
       
     }   
-  
-  
     /**
     * @returns {Sting} Html code
     */
     buildTableHeader(){
-      var html = '<table><thead><tr><th>Nombre</th>';
-      var diffDays = 12;
-      var actual   
+      var html = '<table><thead><tr><th>Nombre</th>';        //
+      var diffDays = 12;                                     //
+      var actual;                                            //   
   
       for(let i = 0; i < diffDays; i++){
-        switch (i){
-          case 0:
-            actual = "Enero"
-            break;
-          case 1:
-            actual = "Febrero"
-            break;
-          case 2:
-            actual = "Marzo"
-            break;
-          case 3:
-            actual = "Abril"
-            break;
-          case 4:
-            actual = "Mayo"
-            break;
-          case 5:
-            actual = "Junio"
-            break;
-          case 6:
-            actual = "Julio"
-            break;
-          case 7:
-            actual = "Agosto"
-            break;
-          case 8:
-            actual = "Septiembre"
-            break;
-          case 9:
-            actual = "Octubre"
-            break;
-          case 10:
-            actual = "Noviembre"
-            break;
-          case 11:
-            actual = "Diciembre"
-            break;
-        }
-        html += '<th>'+actual+"</th>";     
+        actual=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        html += '<th>'+actual[i]+"</th>";                    //
       }
-      html += '<th>Dias Totales</th>';
-      html += '</tr></thead><tbody>';
+      html += '<th>Dias Totales</th>';                       //
+      html += '</tr></thead><tbody>';                        //
   
       return html;
     }
@@ -92,53 +52,54 @@ class Gantt {
       for(let i = 0; i < this.tasks.length; i++){
         var task = this.tasks[i]; 
   
-        var color                                                    //variable para el color
+        var color;                                           //variable para el color
 
         var name = task[0];
 
         var dMin = new Date(task[2]);
-        var ddmin = dMin.getMonth();//+ 1;                           //obtengo el num mes
+        var ddmin = dMin.getMonth();//+ 1;                   //obtengo el num mes
         var dddmin = ddmin + 1;
 
         var dMax = new Date(task[3]);
-        var ddmax = dMax.getMonth() //+ 1;                           // obtengo el num mes
+        var ddmax = dMax.getMonth(); //+ 1;                  // obtengo el num mes
         var dddmax = ddmax + 1;
 
-        var days = this.diffInDays(dMax, dMin);                      //
+        var days = this.diffInDays(dMax, dMin);              //
         var dayss = days;
 
-        var distans = this.diferencias(dddmax, dddmin) +1;           //
+        var distans = this.diferencias(dddmax, dddmin) +1;   //
         if(distans == 13){
-          distans = 12
+          distans = 12;
         }
 
-        var daysBefore = ddmin;                                      //
-        var daysAfter = (11 - ddmax);                                //
+        var daysBefore = ddmin;                              //
+        var daysAfter = (11 - ddmax);                        //
         
   
-        if(days <= 20){                                              //
-          color = "#7FFF00";                                         //
-          if(days <= 5){                                             //
-            dayss = (days * 2)                                       //
+        if(days <= 20){                                      //
+          color = "#7FFF00";
+          if(days >= 10){
+            dayss = days/2;
+          }                                                  //
+          if(days <= 5){                                     //
+            dayss = (days * 2);                              //
           }                                             
-        }else if(days > 20 && days <= 50){                           //
-          color = "#FF8C00";                                         //
-          dayss = days/2                                             //
-        }else if(days > 50){                                         //
-          color = "#B22222"                                          //
-          dayss = (days/10)                                          //
-        }                                                            //
+        }else if(days > 20 && days <= 50){                   //
+          color = "#FF8C00";                                 //
+          dayss = (days/2);                                  //
+          if(dayss >= 10){
+            dayss = 7
+          }
+        }else if(days > 50){                                 //
+          color = "#B22222";                                 //
+          dayss = (days/10)/1.1                              //
+        }                                                    //
 
         html += '<tr>';
         html += '<th id="name">' + name +'</th>';
         if(daysBefore > 0) for(let j = 0; j < daysBefore; j++) html += '<td></td>';
         html += '<td class="event-cell" colspan="'+distans+'">'+'<li style="background-color:'+color+';'+'width:'+ (dayss*10) +'%;">'+task[1]+'</li>'+'</td>';
         if(daysAfter > 0) for(let j = 0; j < daysAfter; j++) html += '<td></td>';
-        /*
-        if(daysBefore > 0) for(let j = 0; j < daysBefore; j++) html += '<td></td>';
-        html += '<td class="event-cell" colspan="'+distans+'" style="background-color: '+color+';">'+task[1]+'</td>';
-        if(daysAfter > 0) for(let j = 0; j < daysAfter; j++) html += '<td></td>';
-        */
         html += '<th>'+days+'</th>';
         html += '</tr>';
       }
@@ -146,10 +107,7 @@ class Gantt {
       html += '</tbody></table>';
   
       return html;
-  
     }
-  
-  
     /**
     * @param {date} the max date
     * @param {date} the min date
